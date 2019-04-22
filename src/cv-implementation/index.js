@@ -48,12 +48,13 @@ const ImageContainer = styled.div({
 
 const LeftContainer = styled.div({
   //   background: "red",
-  flex: 3
+  flex: 3,
+  padding: "2vh 2vw"
 });
 
 const RightContainer = styled.div({
-  background: "pink",
-  flex: 7
+  flex: 7,
+  padding: "2vh 10vw"
 });
 
 const Cell = styled.div({
@@ -82,7 +83,7 @@ class Layout extends Component {
           }}
         >
           <LeftContainer>
-            <div style={{ flex: 1, padding: "10px 6px" }}>
+            <div style={{ flex: 1 }}>
               <h3>ABOUT ME</h3>
               <p>
                 Front-end Engineer with a working experience in web and mobile
@@ -92,7 +93,7 @@ class Layout extends Component {
                 development diploma.
               </p>
             </div>
-            <div style={{ flex: 1, padding: "10px 6px" }}>
+            <div style={{ flex: 1 }}>
               <h3>CONTACTS</h3>
 
               <Cell>
@@ -110,56 +111,17 @@ class Layout extends Component {
                 <span>Hebaahmadsaleh@gmail.com</span>
               </Cell>
             </div>
-            <div style={{ flex: 3, padding: "10px 6px" }}>part 3</div>
+            <div style={{ flex: 3 }}>part 3</div>
           </LeftContainer>
           <RightContainer>
-            asdasdasasd
-            <br />
-            asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br />
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br /> asdasdasasd
-            <br />
+            <div style={{ flex: 1 }}>
+              <h3>Career Objective</h3>
+              <p>
+                Seeking a challenging position in your Company as a Front End
+                developer to utilize my educational background and to gain
+                experience.
+              </p>
+            </div>
           </RightContainer>
         </div>
       </div>
