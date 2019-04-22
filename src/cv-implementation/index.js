@@ -4,6 +4,9 @@ import image from "./dwWscMNW_400x400.jpg";
 import FaMapMarker from "react-icons/lib/fa/map-marker";
 import FaPhoneSquare from "react-icons/lib/fa/phone-square";
 import FaEnvelopeO from "react-icons/lib/fa/envelope-o";
+import FaLinkedinSquare from "react-icons/lib/fa/linkedin-square";
+import FaGithub from "react-icons/lib/fa/github";
+import FaFacebookSquare from "react-icons/lib/fa/facebook-square";
 
 const Container = styled.div({
   //   height: "20vh",
@@ -62,7 +65,25 @@ const Cell = styled.div({
   display: "flex"
 });
 
+const ExperienceCell = styled.div({
+  padding: "0 6px 6px",
+  display: "flex"
+});
+const ExperienceDate = styled.span({
+  marginRight: 10
+});
+
+const ExperienceInfo = styled.span({
+  flex: 1
+});
+
+const SocialCell = styled.div({
+  padding: 4,
+  cursor: "pointer"
+});
 class Layout extends Component {
+  goTo = link => (window.location.href = link);
+
   render() {
     return (
       <div>
@@ -79,7 +100,11 @@ class Layout extends Component {
           style={{
             margin: "0 10vw",
             display: "flex",
-            flexDirection: " row"
+            flexDirection: " row",
+            border: "1px",
+            borderStyle: "double",
+            borderColor: "lightgrey",
+            borderTop: 0
           }}
         >
           <LeftContainer>
@@ -93,14 +118,16 @@ class Layout extends Component {
                 development diploma.
               </p>
             </div>
+
             <div style={{ flex: 1 }}>
               <h3>CONTACTS</h3>
 
               <Cell>
-                <FaMapMarker style={{ marginRight: 6 }} />
-                <span>
-                  appartment 3, 1, Square G, 15 May City, Cairo, Egypt
-                </span>
+                <div>
+                  {" "}
+                  <FaMapMarker style={{ marginRight: 6 }} />{" "}
+                </div>
+                <span>appartment 3, building 1, 15 May City, Cairo, Egypt</span>
               </Cell>
               <Cell>
                 <FaPhoneSquare style={{ marginRight: 6 }} />{" "}
@@ -110,8 +137,38 @@ class Layout extends Component {
                 <FaEnvelopeO style={{ marginRight: 6 }} />{" "}
                 <span>Hebaahmadsaleh@gmail.com</span>
               </Cell>
+
+              <div style={{ display: "flex", flex: 1 }}>
+                <SocialCell>
+                  <FaLinkedinSquare
+                    onClick={() =>
+                      this.goTo(
+                        "https://eg.linkedin.com/in/heba-saleh-935383105"
+                      )
+                    }
+                    color="#0077B5"
+                    style={{ marginRight: 6 }}
+                  />
+                </SocialCell>
+                <SocialCell>
+                  <FaGithub
+                    style={{ marginRight: 6 }}
+                    onClick={() =>
+                      this.goTo("https://github.com/HebaAhmadSaleh")
+                    }
+                  />
+                </SocialCell>
+                <SocialCell>
+                  <FaFacebookSquare
+                    onClick={() =>
+                      this.goTo("https://www.facebook.com/BloomElf")
+                    }
+                    color="#365899"
+                    style={{ marginRight: 6 }}
+                  />
+                </SocialCell>
+              </div>
             </div>
-            <div style={{ flex: 3 }}>part 3</div>
           </LeftContainer>
           <RightContainer>
             <div style={{ flex: 1 }}>
@@ -121,6 +178,154 @@ class Layout extends Component {
                 developer to utilize my educational background and to gain
                 experience.
               </p>
+            </div>
+            <div style={{ flex: 1 }}>
+              <h3> Experience </h3>
+              <ExperienceCell>
+                <ExperienceDate> Jun.2017 – Feb.2019 </ExperienceDate>
+                <ExperienceInfo>
+                  {" "}
+                  (Front End Engineer at Basharsoft.){" "}
+                </ExperienceInfo>
+              </ExperienceCell>
+
+              <ExperienceCell>
+                <ExperienceDate> Feb.2019 – Current </ExperienceDate>
+                <ExperienceInfo>
+                  (Senior Front End Engineer at Basharsoft.){" "}
+                </ExperienceInfo>
+              </ExperienceCell>
+
+              <ExperienceCell>
+                <ExperienceDate> Jan.2017 – Mar.2017 </ExperienceDate>
+                <ExperienceInfo>
+                  {" "}
+                  (React Native Developer at Malsapp.){" "}
+                </ExperienceInfo>
+              </ExperienceCell>
+              <ExperienceCell>
+                <ExperienceDate> Aug.2016 – Nov.2016 </ExperienceDate>
+                <ExperienceInfo>
+                  {" "}
+                  (Full Stake Engineer at IOTBlue.)
+                </ExperienceInfo>
+              </ExperienceCell>
+            </div>
+            <div style={{ flex: 1 }}>
+              <h3> Education </h3>
+              <ExperienceCell>
+                <ExperienceDate> Oct.2015 – Jun.2016 </ExperienceDate>
+                <ExperienceInfo>
+                  9-Month Diploma of Web Development E-business Department, User
+                  Interface Development Track, Information Technology Institute
+                  [ITI], Smart Village Branch, 6 October, Giza, Egypt.
+                  Graduation Project: The Event Event Management System helps
+                  users to create their own Events, monitor their Statistics and
+                  browse Events.
+                </ExperienceInfo>
+              </ExperienceCell>
+
+              <ExperienceCell>
+                <ExperienceDate> Sep.2011 – Jun.2015 </ExperienceDate>
+                <ExperienceInfo>
+                  Bachelor Degree of Computer Science, Faculty of Computers and
+                  Information, Information Systems Department, Cairo University,
+                  Giza, Egypt. Accumulative Grade: Good. Graduation Project: Dos
+                  Banzene Gas station finder Mobile Application helps users to
+                  find near Gas stations.
+                </ExperienceInfo>
+              </ExperienceCell>
+
+              <ExperienceCell>
+                <ExperienceDate> Sep.2008 – Jun.2011 </ExperienceDate>
+                <ExperienceInfo>
+                  High school Certificate from Ahmad Zewail Experimental
+                  Language School, Cairo, Egypt.
+                </ExperienceInfo>
+              </ExperienceCell>
+            </div>
+            <div style={{ display: "flex", flex: 1 }}>
+              <h3> Technical Skills </h3>
+              <div style={{ display: "flex" }}>
+                <ul>
+                  <li>Javscript</li>
+                  <li>HTMl5 </li>
+                  <li>CSS 3 </li>
+                  <li> TypeScript </li>
+                  <li> Webpack </li>
+                  <li>SQL Server</li>
+                  <li>JQuery </li>
+                  <li>ReactNative</li>
+                  <li>AJAX </li>
+                  <li>
+                    {" "}
+                    SEO and customer satisfaction and events tracking tools{" "}
+                  </li>
+                  <li>Angular </li>
+                </ul>
+                <ul style={{ flex: 1 }}>
+                  <li>React.js</li>
+                  <li>Management state (Redux, Flux, Cerebral.js )</li>
+                  <li>Usability</li>
+                  <li>Front End UI Framework (Bootstrap, Material UI) </li>
+                  <li>End to End Testing(Nightwatch)</li>
+                  <li>Storbybook</li>
+                  <li>Node Js </li>
+                  <li>XAML</li>
+                </ul>
+              </div>
+            </div>
+            <div style={{ display: "flex", flex: 1 }}>
+              <h3 style={{ minWidth: 130 }}> Soft Skills </h3>
+              <div style={{ display: "flex" }}>
+                <ul>
+                  <li>Communication Skills </li>
+                  <li> Presentation Skills </li>
+                  <li> Interviewing Skills </li>
+                  <li> Leadership Skills </li>
+                  <li> Time and stress Management </li>
+                  <li> Team Building </li>
+                </ul>
+              </div>
+            </div>
+            <div style={{ display: "flex", flex: 1 }}>
+              <h3 style={{ minWidth: 130, margin: "0 10px" }}> Languages </h3>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <ExperienceCell>
+                  <ExperienceDate> Arabic </ExperienceDate>
+                  <ExperienceInfo> (Native Language.) </ExperienceInfo>
+                </ExperienceCell>
+
+                <ExperienceCell>
+                  <ExperienceDate> English </ExperienceDate>
+                  <ExperienceInfo>(Good.) </ExperienceInfo>
+                </ExperienceCell>
+              </div>
+            </div>
+
+            <div style={{ display: "flex", flex: 1, marginTop: 10 }}>
+              <h3 style={{ minWidth: 130, margin: "0 10px" }}>
+                {" "}
+                Personal Info{" "}
+              </h3>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column"
+                }}
+              >
+                <ExperienceCell>
+                  <ExperienceDate> March 21th, 1993 </ExperienceDate>
+                </ExperienceCell>
+
+                <ExperienceCell>
+                  <ExperienceDate> Egyptian </ExperienceDate>
+                </ExperienceCell>
+
+                <ExperienceCell>
+                  <ExperienceDate> Married </ExperienceDate>
+                </ExperienceCell>
+              </div>
             </div>
           </RightContainer>
         </div>
