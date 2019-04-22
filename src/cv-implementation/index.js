@@ -108,7 +108,7 @@ class Layout extends Component {
           }}
         >
           <LeftContainer>
-            <div style={{ flex: 1 }}>
+            {/* <div style={{ flex: 1 }}>
               <h3>ABOUT ME</h3>
               <p>
                 Front-end Engineer with a working experience in web and mobile
@@ -117,17 +117,17 @@ class Layout extends Component {
                 Computer Science from Cairo University and user interface
                 development diploma.
               </p>
-            </div>
+            </div> */}
 
             <div style={{ flex: 1 }}>
-              <h3>CONTACTS</h3>
+              <h3>Contact Information</h3>
 
               <Cell>
                 <div>
                   {" "}
                   <FaMapMarker style={{ marginRight: 6 }} />{" "}
                 </div>
-                <span>appartment 3, building 1, 15 May City, Cairo, Egypt</span>
+                <span>15 May City, Cairo, Egypt</span>
               </Cell>
               <Cell>
                 <FaPhoneSquare style={{ marginRight: 6 }} />{" "}
@@ -167,6 +167,35 @@ class Layout extends Component {
                     style={{ marginRight: 6 }}
                   />
                 </SocialCell>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  flex: 1,
+                  marginTop: 10,
+                  flexDirection: "column"
+                }}
+              >
+                <h3> Personal Information </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
+                  <ExperienceCell>
+                    <ExperienceDate> March 21th, 1993 </ExperienceDate>
+                  </ExperienceCell>
+
+                  <ExperienceCell>
+                    <ExperienceDate> Egyptian </ExperienceDate>
+                  </ExperienceCell>
+
+                  <ExperienceCell>
+                    <ExperienceDate> Married </ExperienceDate>
+                  </ExperienceCell>
+                </div>
               </div>
             </div>
           </LeftContainer>
@@ -244,8 +273,8 @@ class Layout extends Component {
                 </ExperienceInfo>
               </ExperienceCell>
             </div>
+            <h3 style={{ marginBottom: 0 }}> Technical Skills </h3>
             <div style={{ display: "flex", flex: 1 }}>
-              <h3> Technical Skills </h3>
               <div style={{ display: "flex" }}>
                 <ul>
                   <li>Javscript</li>
@@ -275,8 +304,8 @@ class Layout extends Component {
                 </ul>
               </div>
             </div>
+            <h3 style={{ marginBottom: 0, minWidth: 130 }}> Soft Skills </h3>
             <div style={{ display: "flex", flex: 1 }}>
-              <h3 style={{ minWidth: 130 }}> Soft Skills </h3>
               <div style={{ display: "flex" }}>
                 <ul>
                   <li>Communication Skills </li>
@@ -299,31 +328,6 @@ class Layout extends Component {
                 <ExperienceCell>
                   <ExperienceDate> English </ExperienceDate>
                   <ExperienceInfo>(Good.) </ExperienceInfo>
-                </ExperienceCell>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", flex: 1, marginTop: 10 }}>
-              <h3 style={{ minWidth: 130, margin: "0 10px" }}>
-                {" "}
-                Personal Info{" "}
-              </h3>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column"
-                }}
-              >
-                <ExperienceCell>
-                  <ExperienceDate> March 21th, 1993 </ExperienceDate>
-                </ExperienceCell>
-
-                <ExperienceCell>
-                  <ExperienceDate> Egyptian </ExperienceDate>
-                </ExperienceCell>
-
-                <ExperienceCell>
-                  <ExperienceDate> Married </ExperienceDate>
                 </ExperienceCell>
               </div>
             </div>
